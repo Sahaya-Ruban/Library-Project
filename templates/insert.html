@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Details</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        .table1{
+            border: 1px solid;
+            border-collapse: collapse;
+            margin-left: 25rem;
+            
+        }
+        .table1 th{
+            border: 1px solid;
+            border-collapse: collapse;
+            text-align: center;
+            padding: 1.2rem;
+            font-size: 1.1rem;
+        }
+        .table1 td{
+            border: 1px solid;
+            border-collapse: collapse;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        form{
+            margin-left: 5rem;
+            margin-top: 3rem;
+        }
+
+        form td{
+            font-size: 1.1rem;
+        }
+        input{
+            height: 1.4rem;
+        }
+    </style>
+</head>
+<body>
+
+    <form method="post">
+        <table>
+            <tr>
+                <td><label for="Book_name">Book Name:</label></td>
+                <td><input type="text" name="Book_name" placeholder="Enter the Book Name"></td>
+            </tr>
+            <tr>
+                <td><label for="Book_id">Book ID:</label></td>
+                <td><input type="text" name="Book_id" placeholder="Enter the Book ID"></td>
+            </tr>
+            <tr>
+                <td><label for="Author_name">Author Name:</label></td>
+                <td><input type="text" name="Author_name" placeholder="Enter the Author Name"></td>
+            </tr>
+            <tr>
+                <td><label for="Status">Status of the Book:</label></td>
+                <td>
+                    <select name="Status">
+                        <option>--select--</option>
+                        <option>Available</option>
+                        <option>Issued</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Submit"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

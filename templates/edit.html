@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post">
+        <table>
+            <tr>
+                <td><label for="Book_name">Book Name:</label></td>
+                <td><input type="text" name="Book_name" placeholder="Enter the Book Name" value="{{data.Book_name}}"></td>
+            </tr>
+            <tr>
+                <td><label for="Book_id">Book ID:</label></td>
+                <td><input type="text" name="Book_id" placeholder="Enter the Book ID" value="{{data.Book_id}}"></td>
+            </tr>
+            <tr>
+                <td><label for="Author_name">Author Name:</label></td>
+                <td><input type="text" name="Author_name" placeholder="Enter the Author Name" value="{{data.Author_name}}"></td>
+            </tr>
+            <tr>
+                <td><label for="Status">Status of the Book:</label></td>
+                <td>
+                    <select name="Status" value="{{data.Status}}">
+                        <option>--select--</option>
+                        <option>Available</option>
+                        <option>Issued</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Submit"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

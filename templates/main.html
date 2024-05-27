@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+        .main{
+            margin-top: 10rem;
+        }
+        .index1,.index2{
+            text-decoration: none;
+            color: black;
+            font-size: 1.5rem;
+            border: 1px solid;
+            background-color: aqua;
+            padding: .7rem;
+        }
+        .index2{
+            margin-left: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <a href="{{url_for('signup')}}" class="index1">signin</a>
+        <a href="{{url_for('login')}}" class="index2">Login</a>
+    </div>
+</body>
+</html>

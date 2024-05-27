@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Details</title>
+    <style>
+        body{
+            background-color: violet;
+        }
+
+        h1{
+            text-align: center;
+            color: black;
+        }
+
+        .a1{
+            text-decoration: none;
+            color: black;
+            background-color: green;
+            font-size: 1.2rem;
+            border: 1px solid black;
+            padding: .5rem;
+            margin-left: 25rem;
+        }
+
+        .a2{
+            text-decoration: none;
+            color: black;
+            background-color: red;
+            font-size: 1.2rem;
+            border: 1px solid black;
+            padding: .5rem;
+            margin-left: 10rem;
+        }
+
+        .table1{
+            border: 1px solid;
+            border-collapse: collapse;
+            margin-left: 20rem;
+            margin-top: 3rem;
+            
+        }
+        .table1 th{
+            border: 1px solid black;
+            border-collapse: collapse;
+            color: white;
+            text-align: center;
+            padding: 1.2rem;
+            font-size: 1.1rem;
+        }
+        .table1 td{
+            border: 1px solid black;
+            color: white;
+            border-collapse: collapse;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .green{
+            background-color: green;
+        }
+
+        .red{
+            background-color: red;
+        }
+        td a{
+            text-decoration: none;
+            color: white;
+        }
+
+        form{
+            margin-left: 5rem;
+            margin-top: 3rem;
+        }
+
+        form td{
+            font-size: 1.1rem;
+        }
+        input{
+            height: 1.4rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Library Management System</h1>
+
+    <a href="{{url_for('insert')}}" class="a1">Add Details</a>
+    <a href="{{url_for('logout')}}" class="a2">Logout</a>
+    <table class="table1">
+        <tr>
+            <th>Book Name</th>
+            <th>Book ID</th>
+            <th>Author Name</th>
+            <th>Status of the Book</th>
+            <th colspan="2">Action</th>
+        </tr>
+
+        {%for i in data%}
+        <tr>
+            <td>{{i.Book_name}}</td>
+            <td>{{i.Book_id}}</td>
+            <td>{{i.Author_name}}</td>
+            <td>{{i.Status}}</td>
+            <td class="green"><a href="{{url_for('edit',id=i._id)}}">Edit</a></td>
+            <td class="red"><a href="{{url_for('delete',id=i._id)}}">Delete</a></td>
+        </tr>
+        {%endfor%}
+    </table>
+
+    
+</body>
+</html>
